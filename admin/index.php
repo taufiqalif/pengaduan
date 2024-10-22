@@ -40,7 +40,7 @@ if ($id_admin > 0) {
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="shortcut icon" href="images/favicon.ico">
-    <title>Dashboard - Pengaduan Dispenduk Bangkalan</title>
+    <title>Dashboard</title>
     <!-- Bootstrap core CSS-->
     <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
     <!-- Custom fonts for this template-->

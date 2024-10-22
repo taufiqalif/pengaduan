@@ -56,7 +56,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="shortcut icon" href="images/favicon.ico">
-    <title>Table - Pengaduan Dispenduk Bangkalan</title>
+    <title>Table - Pengaduan Dispenduk</title>
     <!-- Bootstrap core CSS-->
     <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
     <!-- Custom fonts for this template-->
@@ -112,12 +112,6 @@
                     </a>
                 </li>
 
-                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Version">
-                    <a class="nav-link" href="#VersionModal" data-toggle="modal" data-target="#VersionModal">
-                        <i class="fa fa-fw fa-code"></i>
-                        <span class="nav-link-text">v-6.0</span>
-                    </a>
-                </li>
 
             </ul>
 
