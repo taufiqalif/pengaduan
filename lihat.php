@@ -40,7 +40,7 @@ if (isset($_POST['submit'])) {
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>Lihat Pengaduan | Dispendukcapil Bangkalan</title>
+    <title>Lihat Pengaduan | KELURAHAN JAYASAMPURNA</title>
     <link rel="shortcut icon" href="images/favicon.ico">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.css">

@@ -18,7 +18,7 @@ if ($statement->rowCount() < 1) {
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>Lapor | Dispendukcapil Bangkalan</title>
+    <title>Lapor | KELURAHAN JAYASAMPURNA</title>
     <link rel="shortcut icon" href="images/favicon.ico">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.css">

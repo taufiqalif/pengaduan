@@ -18,7 +18,7 @@ function RandomAvatar()
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>Dispendukcapil Bangkalan</title>
+    <title>KELURAHAN JAYASAMPURNA</title>
     <link rel="shortcut icon" href="images/favicon.ico">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.css">
