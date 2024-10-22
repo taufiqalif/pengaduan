@@ -54,7 +54,7 @@ if ($id_admin > 0) {
 <body class="fixed-nav sticky-footer" id="page-top">
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-        <a class="navbar-brand" href="index">Dispenduk Bangkalan</a>
+        <a class="navbar-brand" href="index">KELURAHAN JAYASAMPURNA</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -96,12 +96,7 @@ if ($id_admin > 0) {
                     </a>
                 </li>
 
-                <!-- <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Version">
-                    <a class="nav-link" href="#VersionModal" data-toggle="modal" data-target="#VersionModal">
-                        <i class="fa fa-fw fa-code"></i>
-                        <span class="nav-link-text">v-6.0</span>
-                    </a>
-                </li> -->
+                
             </ul>
 
             <ul class="navbar-nav sidenav-toggler">

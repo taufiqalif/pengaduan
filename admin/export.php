@@ -1,7 +1,7 @@
 <?php
 require_once("database.php");
 require_once("auth.php"); // Session
-logged_admin ();
+logged_admin();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,7 +13,7 @@ logged_admin ();
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="shortcut icon" href="images/favicon.ico">
-    <title>Export - Pengaduan Dispenduk Bangkalan</title>
+    <title>Export - Pengaduan Dispenduk</title>
     <!-- Bootstrap core CSS-->
     <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
     <!-- Custom fonts for this template-->
@@ -37,38 +37,37 @@ logged_admin ();
     <script src="vendor/datatables/extra/pdfmake.min.js"></script>
     <script src="vendor/datatables/extra/vfs_fonts.js"></script>
     <script src="vendor/datatables/extra/buttons.html5.min.js"></script>
-    <script type="text/javascript"  class="init">
-    $(document).ready(function() {
-        $('#example').DataTable( {
-            dom: 'Bfrtip',
-            buttons: [
-                {
-                    extend: 'print',
-                    title: 'Data Pengaduan',
-                    customize: function ( win ) {
-                        $(win.document.body).find( 'table' )
-                        .addClass( 'compact' )
-                        .css( 'font-size', 'inherit' );
-                        $(win.document.body)
-                        .css( 'font-size', '10pt' )
-                        .prepend(
-                            '<img src="http://www.surabaya.bpk.go.id/wp-content/uploads/2015/07/logo-Bangkalan.png" style="opacity: 0.5; display:block;margin-left: auto; margin-top: auto; margin-right: auto; width: 100px;" />'
-                        );
+    <script type="text/javascript" class="init">
+        $(document).ready(function() {
+            $('#example').DataTable({
+                dom: 'Bfrtip',
+                buttons: [{
+                        extend: 'print',
+                        title: 'Data Pengaduan',
+                        customize: function(win) {
+                            $(win.document.body).find('table')
+                                .addClass('compact')
+                                .css('font-size', 'inherit');
+                            $(win.document.body)
+                                .css('font-size', '10pt')
+                                .prepend(
+                                    '<img src="http://www.surabaya.bpk.go.id/wp-content/uploads/2015/07/logo-Bangkalan.png" style="opacity: 0.5; display:block;margin-left: auto; margin-top: auto; margin-right: auto; width: 100px;" />'
+                                );
+                        }
+                    },
+                    {
+                        extend: 'pdf',
+                        orientation: 'landscape',
+                        pageSize: 'LEGAL',
+                        title: 'Data Pengaduan'
+                    },
+                    {
+                        extend: 'excel',
+                        title: 'Data Pengaduan'
                     }
-                },
-                {
-                    extend: 'pdf',
-                    orientation: 'landscape',
-                    pageSize: 'LEGAL',
-                    title: 'Data Pengaduan'
-                },
-                {
-                    extend: 'excel',
-                    title: 'Data Pengaduan'
-                }
-            ]
-        } );
-    } );
+                ]
+            });
+        });
     </script>
 
 </head>
@@ -76,7 +75,7 @@ logged_admin ();
 <body class="fixed-nav sticky-footer" id="page-top">
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-        <a class="navbar-brand" href="index">Dispenduk Bangkalan</a>
+        <a class="navbar-brand" href="index">KELURAHAN JAYASAMPURNA</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -146,26 +145,26 @@ logged_admin ();
                         </span>
                     </a>
                     <?php
-                        $statement = $db->query("SELECT * FROM laporan ORDER BY laporan.id DESC LIMIT 1");
-                        foreach ($statement as $key ) {
-                            $mysqldate = $key['tanggal'];
-                            $phpdate = strtotime($mysqldate);
-                            $tanggal = date( 'd/m/Y', $phpdate);
-                     ?>
-                    <div class="dropdown-menu" aria-labelledby="messagesDropdown">
-                        <h6 class="dropdown-header">Laporan Baru :</h6>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">
-                            <strong><?php echo $key['nama']; ?></strong>
-                            <span class="small float-right text-muted"><?php echo $key['tanggal']; ?></span>
-                            <div class="dropdown-message small"><?php echo $key['isi']; ?></div>
-                        </a>
-                        <div class="dropdown-divider"></div>
-                        <!-- <a class="dropdown-item small" href="#">View all messages</a> -->
-                    </div>
+                    $statement = $db->query("SELECT * FROM laporan ORDER BY laporan.id DESC LIMIT 1");
+                    foreach ($statement as $key) {
+                        $mysqldate = $key['tanggal'];
+                        $phpdate = strtotime($mysqldate);
+                        $tanggal = date('d/m/Y', $phpdate);
+                    ?>
+                        <div class="dropdown-menu" aria-labelledby="messagesDropdown">
+                            <h6 class="dropdown-header">Laporan Baru :</h6>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">
+                                <strong><?php echo $key['nama']; ?></strong>
+                                <span class="small float-right text-muted"><?php echo $key['tanggal']; ?></span>
+                                <div class="dropdown-message small"><?php echo $key['isi']; ?></div>
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <!-- <a class="dropdown-item small" href="#">View all messages</a> -->
+                        </div>
                     <?php
-                        }
-                     ?>
+                    }
+                    ?>
 
                 </li>
                 <li class="nav-item">
@@ -219,17 +218,17 @@ logged_admin ();
                                     $statement = $db->query("SELECT * FROM laporan, divisi WHERE laporan.tujuan = divisi.id_divisi ORDER BY laporan.id DESC");
                                 }
 
-                                foreach ($statement as $key ) {
+                                foreach ($statement as $key) {
                                     $mysqldate = $key['tanggal'];
                                     $phpdate = strtotime($mysqldate);
-                                    $tanggal = date( 'd/m/Y', $phpdate);
+                                    $tanggal = date('d/m/Y', $phpdate);
                                     $status  = $key['status'];
-                                    if($status == "Ditanggapi") {
+                                    if ($status == "Ditanggapi") {
                                         $style_status = "<p style=\"background-color:#009688;color:#fff;padding-left:2px;padding-right:2px;padding-bottom:2px;margin-top:16px;font-size:15px;font-style:italic;\">Ditanggapi</p>";
                                     } else {
                                         $style_status = "<p style=\"background-color:#FF9800;color:#fff;padding-left:2px;padding-right:2px;padding-bottom:2px;margin-top:16px;font-size:15px;font-style:italic;\">Menunggu</p>";
                                     }
-                                    ?>
+                                ?>
                                     <tr>
                                         <td><?php echo $key['nama']; ?></td>
                                         <td><?php echo $key['email']; ?></td>
@@ -240,7 +239,7 @@ logged_admin ();
                                         <td><?php echo $tanggal; ?></td>
                                         <td><?php echo $style_status; ?></td>
                                     </tr>
-                                    <?php
+                                <?php
                                 }
                                 ?>
                             </tbody>
@@ -285,7 +284,7 @@ logged_admin ();
                 </div>
             </div>
         </div>
-        
+
         <!-- Version Info Modal -->
         <!-- Modal -->
         <div class="modal fade" id="VersionModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -294,7 +293,7 @@ logged_admin ();
                     <div class="modal-header">
                         <h5 class="modal-title">Admin Versi</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
+                            <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body">
