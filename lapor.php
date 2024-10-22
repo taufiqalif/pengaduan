@@ -1,16 +1,16 @@
 <?php
-    require_once("private/database.php");
-    $statement = $db->query("SELECT id FROM `laporan` ORDER BY id DESC LIMIT 1");
-    // $cekk = $statement->fetch(PDO::FETCH_ASSOC);
-    if ($statement->rowCount()>0) {
-        foreach ($statement as $key ) {
-            // get max id from tabel laporan
-            $max_id = $key['id']+1;
-        }
+require_once("private/database.php");
+$statement = $db->query("SELECT id FROM `laporan` ORDER BY id DESC LIMIT 1");
+// $cekk = $statement->fetch(PDO::FETCH_ASSOC);
+if ($statement->rowCount() > 0) {
+    foreach ($statement as $key) {
+        // get max id from tabel laporan
+        $max_id = $key['id'] + 1;
     }
-    if ($statement->rowCount()<1) {
-        $max_id = 100;
-    }
+}
+if ($statement->rowCount() < 1) {
+    $max_id = 100;
+}
 ?>
 <!DOCTYPE html>
 <html lang="id">
@@ -62,7 +62,7 @@
                                 <li class="divider"></li>
                                 <li><a href="profildinas">Struktur Organisasi</a></li>
                                 <li class="divider"></li>
-                                <li><a href="profildinas">Motto / Maklumat Pelayanan</a></li>
+
                             </ul>
                         </li>
                         <li><a href="faq">FAQ</a></li>
@@ -78,7 +78,7 @@
         <div class="main-content">
 
             <h3>Buat Laporan</h3>
-            <hr/>
+            <hr />
             <div class="row">
                 <div class="col-md-8 card-shadow-2 form-custom">
                     <form class="form-horizontal" role="form" method="post" action="private/validasi">
@@ -141,6 +141,7 @@
                                         <option value="2">Pelayanan Pencatatan Sipil</option>
                                         <option value="3">Pengelolaan Informasi Administrasi Kependudukan</option>
                                         <option value="4">Pemanfaatan Data Dan Inovasi Pelayanan</option>
+                                        <option value="5">Pengelolaan Sumber Daya Masyarakat</option>
                                     </select>
                                 </div>
                             </div>
@@ -160,7 +161,7 @@
                             <div class="col-sm-9">
                                 <div class="input-group">
                                     <!--menampilkan gambar captcha-->
-                                    <img class="card-shadow-2" src="private/captcha.php"/> <br/>
+                                    <img class="card-shadow-2" src="private/captcha.php" /> <br />
                                 </div>
                             </div>
                         </div>
@@ -194,20 +195,23 @@
                 <i class="fa fa-arrow-circle-up"></i>
             </a>
             <script>
-            // When the user scrolls down 100px from the top of the document, show the button
-            window.onscroll = function() {scrollFunction()};
-            function scrollFunction() {
-                if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-                    document.getElementById("top").style.display = "block";
-                } else {
-                    document.getElementById("top").style.display = "none";
+                // When the user scrolls down 100px from the top of the document, show the button
+                window.onscroll = function() {
+                    scrollFunction()
+                };
+
+                function scrollFunction() {
+                    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                        document.getElementById("top").style.display = "block";
+                    } else {
+                        document.getElementById("top").style.display = "none";
+                    }
                 }
-            }
-            // When the user clicks on the button, scroll to the top of the document
-            function topFunction() {
-                document.body.scrollTop = 0;
-                document.documentElement.scrollTop = 0;
-            }
+                // When the user clicks on the button, scroll to the top of the document
+                function topFunction() {
+                    document.body.scrollTop = 0;
+                    document.documentElement.scrollTop = 0;
+                }
             </script>
             <!-- link to top -->
 
@@ -229,8 +233,7 @@
                         </li>
                     </ul>
                     <p class="mb-0">
-                        Jalan Soekarno-Hatta No 50
-                        <br>Bangkalan, Jawa Timur
+                        Kecamatan Serang Baru <br> Kabupaten Bekasi <br> Provinsi Jawa Barat
                     </p>
                 </div>
                 <div class="col-md-4 mb-5 mb-lg-0">
@@ -276,7 +279,7 @@
 
         <div class="copyright py-4 text-center text-white">
             <div class="container">
-                <small>v-6.0 | Copyright &copy; Dispendukcapil Bangkalan 2018</small>
+                <small>Copyright &copy; 2024</small>
             </div>
         </div>
         <!-- shadow -->

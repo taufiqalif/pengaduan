@@ -109,7 +109,7 @@ function RandomAvatar()
                                 <li class="divider"></li>
                                 <li><a href="profildinas">Struktur Organisasi</a></li>
                                 <li class="divider"></li>
-                                <li><a href="profildinas">Motto / Maklumat Pelayanan</a></li>
+
                             </ul>
                         </li>
                         <li><a href="faq">FAQ</a></li>
@@ -134,22 +134,10 @@ function RandomAvatar()
 
             <div class="carousel-inner" role="listbox">
                 <div class="item active">
-                    <img src="images/01.jpg" alt="...">
+                    <img src="images/desaJayasampurna.jpg" alt="...">
                     <div class="carousel-caption welcome">
                         <h2 class="animated bounceInRight">Selamat Datang</h2>
-                        <h3 class="animated bounceInLeft">Website Pengaduan Masyarakat Dispendukcapil Bangkalan</h3>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="images/02.jpg" alt="...">
-                    <div class="carousel-caption">
-                        <h2 class="animated bounceInDown">Pejabat</h2>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="images/03.jpg" alt="...">
-                    <div class="carousel-caption">
-                        <h2 class="animated bounceInUp">Pengumuman</h2>
+                        <h3 class="animated bounceInLeft">Website Pengaduan Masyarakat KELURAHAN JAYASAMPURNA</h3>
                     </div>
                 </div>
             </div>
@@ -226,8 +214,8 @@ function RandomAvatar()
                             </div>
                             <div class="info">
                                 <h3 class="text-center">twitter</h3>
-                                <a class="twitter-timeline" href="https://twitter.com/disdukcapilbkl?ref_src=twsrc%5Etfw" data-width="500" data-height="300">Tweets by disdukcapilbkl</a>
-                                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                                <a class="twitter-timeline" href="" data-width="500" data-height="300">Tweets by disdukcapilbkl</a>
+                                <script async src="" charset="utf-8"></script>
                             </div>
                         </div>
                         <!-- End Twitter Feed -->
@@ -239,128 +227,113 @@ function RandomAvatar()
                             </div>
                             <div class="info">
                                 <h3 class="text-center">facebook</h3>
-                                <div class="fb-page" data-height="300" data-width="500" data-href="https://www.facebook.com/dispendukcapilbkl" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
-                                    <blockquote cite="https://www.facebook.com/dispendukcapilbkl" class="fb-xfbml-parse-ignore">
-                                        <a href="https://www.facebook.com/dispendukcapilbkl">Dispenduk dan Capil Kabupaten Bangkalan</a>
+                                <div class="fb-page" data-height="300" data-width="500" data-href="" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                                    <blockquote cite="" class="fb-xfbml-parse-ignore">
+                                        <a href="">KELURAHAN JAYASAMPURNA</a>
                                     </blockquote>
                                 </div>
                             </div>
                         </div>
                         <!-- End Facebook Feed -->
-                        <hr>
-                        <!-- Facebook Feed -->
-                        <div class="box">
-                            <div class="box-icon shadow">
-                                <span class="fa fa-2x fa-rss"></span>
-                            </div>
-                            <div class="info">
-                                <h3 class="text-center">link</h3>
-                                <ul class="list-group">
-                                    <li class="list-group-item list-group-item-success"><a href="http://www.bangkalankab.go.id/v4/">Website Pemerintah Bangkalan</a></li>
-                                    <li class="list-group-item list-group-item-info"><a href="http://kominfo.bangkalankab.go.id/">Website Diskominfo Bangkalan</a></li>
-                                    <li class="list-group-item list-group-item-warning"><a href="http://dispendukcapilbkl.com/">Website Dispendukcapil Bangkalan</a></li>
-                                    <li class="list-group-item list-group-item-danger"><a href="http://bappeda.bangkalankab.go.id/">Website Bappeda Bangkalan</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- End Facebook Feed -->
+
                     </div>
-                    <!-- End Social Media Feed -->
+                    <!-- End Facebook Feed -->
                 </div>
-                <!-- end row -->
+                <!-- End Social Media Feed -->
             </div>
-            <!-- /.section -->
-
-            <!-- link to top -->
-            <a id="top" href="#" onclick="topFunction()">
-                <i class="fa fa-arrow-circle-up"></i>
-            </a>
-            <script>
-                // When the user scrolls down 100px from the top of the document, show the button
-                window.onscroll = function() {
-                    scrollFunction()
-                };
-
-                function scrollFunction() {
-                    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-                        document.getElementById("top").style.display = "block";
-                    } else {
-                        document.getElementById("top").style.display = "none";
-                    }
-                }
-                // When the user clicks on the button, scroll to the top of the document
-                function topFunction() {
-                    document.body.scrollTop = 0;
-                    document.documentElement.scrollTop = 0;
-                }
-            </script>
-            <!-- link to top -->
-
+            <!-- end row -->
         </div>
-        <!-- end main-content -->
+        <!-- /.section -->
 
-        <!-- Footer -->
-        <footer class="footer text-center">
-            <div class="row">
-                <div class="col-md-4 mb-5 mb-lg-0">
-                    <ul class="list-inline mb-0">
-                        <li class="list-inline-item">
-                            <i class="fa fa-top fa-map-marker"></i>
-                        </li>
-                        <li class="list-inline-item">
-                            <h4 class="text-uppercase mb-4">Kantor</h4>
-                        </li>
-                    </ul>
-                    <p class="mb-0">
-                        Jalan Soekarno-Hatta No 50
-                        <br>Bangkalan, Jawa Timur
-                    </p>
-                </div>
-                <div class="col-md-4 mb-5 mb-lg-0">
-                    <ul class="list-inline mb-0">
-                        <li class="list-inline-item">
-                            <i class="fa fa-top fa-rss"></i>
-                        </li>
-                        <li class="list-inline-item">
-                            <h4 class="text-uppercase mb-4">Sosial Media</h4>
-                        </li>
-                    </ul>
-                    <ul class="list-inline mb-0">
-                        <li class="list-inline-item">
-                            <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://www.facebook.com/dispendukcapilbkl/">
-                                <i class="fa fa-fw fa-facebook"></i>
-                            </a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://twitter.com/disdukcapilbkl">
-                                <i class="fa fa-fw fa-twitter"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <ul class="list-inline mb-0">
-                        <li class="list-inline-item">
-                            <i class="fa fa-top fa-envelope-o"></i>
-                        </li>
-                        <li class="list-inline-item">
-                            <h4 class="text-uppercase mb-4">Kontak</h4>
-                        </li>
-                    </ul>
-                    <p class="mb-0">
-                        031-3095331 <br>
-                        dispendukcapil@bangkalankab.go.id <br>
-                        dispendukcapil.bangkalan@gmail.com
-                    </p>
-                </div>
+        <!-- link to top -->
+        <a id="top" href="#" onclick="topFunction()">
+            <i class="fa fa-arrow-circle-up"></i>
+        </a>
+        <script>
+            // When the user scrolls down 100px from the top of the document, show the button
+            window.onscroll = function() {
+                scrollFunction()
+            };
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                    document.getElementById("top").style.display = "block";
+                } else {
+                    document.getElementById("top").style.display = "none";
+                }
+            }
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+        </script>
+        <!-- link to top -->
+
+    </div>
+    <!-- end main-content -->
+
+    <!-- Footer -->
+    <footer class="footer text-center">
+        <div class="row">
+            <div class="col-md-4 mb-5 mb-lg-0">
+                <ul class="list-inline mb-0">
+                    <li class="list-inline-item">
+                        <i class="fa fa-top fa-map-marker"></i>
+                    </li>
+                    <li class="list-inline-item">
+                        <h4 class="text-uppercase mb-4">Kantor</h4>
+                    </li>
+                </ul>
+                <p class="mb-0">
+                    Kecamatan Serang Baru <br> Kabupaten Bekasi <br> Provinsi Jawa Barat
+                </p>
             </div>
-        </footer>
-        <!-- /footer -->
-
-        <div class="copyright py-4 text-center text-white">
-            <small>v-6.0 | Copyright &copy; Dispendukcapil Bangkalan 2018</small>
+            <div class="col-md-4 mb-5 mb-lg-0">
+                <ul class="list-inline mb-0">
+                    <li class="list-inline-item">
+                        <i class="fa fa-top fa-rss"></i>
+                    </li>
+                    <li class="list-inline-item">
+                        <h4 class="text-uppercase mb-4">Sosial Media</h4>
+                    </li>
+                </ul>
+                <ul class="list-inline mb-0">
+                    <li class="list-inline-item">
+                        <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://www.facebook.com/dispendukcapilbkl/">
+                            <i class="fa fa-fw fa-facebook"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://twitter.com/disdukcapilbkl">
+                            <i class="fa fa-fw fa-twitter"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <ul class="list-inline mb-0">
+                    <li class="list-inline-item">
+                        <i class="fa fa-top fa-envelope-o"></i>
+                    </li>
+                    <li class="list-inline-item">
+                        <h4 class="text-uppercase mb-4">Kontak</h4>
+                    </li>
+                </ul>
+                <p class="mb-0">
+                    031-3095331 <br>
+                    dispendukcapil@bangkalankab.go.id <br>
+                    dispendukcapil.bangkalan@gmail.com
+                </p>
+            </div>
         </div>
-        <!-- shadow -->
+    </footer>
+    <!-- /footer -->
+
+    <div class="copyright py-4 text-center text-white">
+        <small>Copyright &copy; 2024</small>
+    </div>
+    <!-- shadow -->
     </div>
 
 </body>
