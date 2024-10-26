@@ -147,6 +147,16 @@ if ($statement->rowCount() < 1) {
                             </div>
                         </div>
                         <div class="form-group">
+                            <label for="foto" class="col-sm-3 control-label">Upload Foto</label>
+                            <div class="col-sm-9">
+                                <div class="input-group">
+                                    <div class="input-group-addon"><span class="glyphicon glyphicon-camera"></span></div>
+                                    <input type="file" class="form-control" id="foto" name="foto" placeholder="Upload Foto" value="<?= @$_GET['foto'] ?>" required>
+                                </div>
+                                <p class="error"><?= @$_GET['fotoError'] ?></p>
+                            </div>
+                        </div>
+                        <div class="form-group">
                             <label for="pengaduan" class="col-sm-3 control-label">Isi Pengaduan</label>
                             <div class="col-sm-9">
                                 <div class="input-group">

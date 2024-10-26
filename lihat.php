@@ -189,6 +189,10 @@ if (isset($_POST['submit'])) {
                                     </div>
                                     <hr class="hr-laporan">
 
+                                    <div class="">
+                                        <?php echo $key['foto']; ?>
+                                    </div>
+
                                     <!-- Comments -->
                                     <div>
                                         <h3 class="custom">Tindak Lanjut Laporan</h3>
