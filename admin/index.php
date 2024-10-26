@@ -96,7 +96,7 @@ if ($id_admin > 0) {
                     </a>
                 </li>
 
-                
+
             </ul>
 
             <ul class="navbar-nav sidenav-toggler">
@@ -250,6 +250,7 @@ if ($id_admin > 0) {
                                     <th>Telpon</th>
                                     <th>Alamat</th>
                                     <th>Tujuan</th>
+                                    <th>Foto Laporan</th>
                                     <th>Isi Laporan</th>
                                     <th>Tanggal</th>
                                     <th class="sorting_asc_disabled sorting_desc_disabled">Status</th>

@@ -1,9 +1,8 @@
 <?php
 session_start();
 require_once("database.php");
-header("Location: ../index?status=success");
+// header("Location: ../index?status=success");
 // Atasi Undefined
-// Variabel untuk mengatasi Undefined dan Error
 $nama = $email = $telpon = $alamat = $pengaduan = $captcha = $is_valid = "";
 $namaError = $emailError = $telponError = $alamatError = $pengaduanError = $captchaError = "";
 
@@ -20,15 +19,13 @@ if (isset($_POST['submit'])) {
 
     validate_input();
 
-    // Proses unggah file foto
-    if ($_FILES['foto']['error'] == UPLOAD_ERR_OK) {
+    // Proses unggah file foto jika ada
+    if (isset($_FILES['foto']) && $_FILES['foto']['error'] == UPLOAD_ERR_OK) {
         $foto_tmp  = $_FILES['foto']['tmp_name'];
         $foto_name = basename($_FILES['foto']['name']);
-        $foto_path = './foto/' . $foto_name; // Menentukan folder penyimpanan foto
+        $foto_path = '../foto/' . $foto_name;
 
-        // Pindahkan file foto ke folder tujuan
         if (move_uploaded_file($foto_tmp, $foto_path)) {
-            // Jika validasi berhasil, masukkan data ke database
             if ($is_valid) {
                 $sql = "INSERT INTO `laporan` (`id`, `nama`, `email`, `telpon`, `alamat`, `tujuan`, `foto`, `isi`, `tanggal`, `status`) 
                         VALUES (:nomor, :nama, :email, :telpon, :alamat, :tujuan, :foto, :isi, CURRENT_TIMESTAMP, :status)";
@@ -39,41 +36,50 @@ if (isset($_POST['submit'])) {
                 $stmt->bindValue(':telpon', $telpon);
                 $stmt->bindValue(':alamat', htmlspecialchars($alamat));
                 $stmt->bindValue(':tujuan', $tujuan);
-                $stmt->bindValue(':foto', $foto_name); // Gunakan nama file hasil upload
+                $stmt->bindValue(':foto', $foto_name);
                 $stmt->bindValue(':isi', htmlspecialchars($pengaduan));
                 $stmt->bindValue(':status', "Menunggu");
 
                 if ($stmt->execute()) {
-                    // Arahkan pengguna jika berhasil
                     header("Location: ../index?status=success");
                     exit();
                 } else {
                     echo "Gagal menyimpan data ke database.";
                 }
-            } else {
-                // Arahkan kembali jika validasi gagal
-                header("Location: ../lapor.php?nomor=$nomor&nama=$nama&namaError=$namaError&email=$email&emailError=$emailError&telpon=$telpon&telponError=$telponError&alamat=$alamat&alamatError=$alamatError&pengaduan=$pengaduan&pengaduanError=$pengaduanError&captcha=$captcha&captchaError=$captchaError");
-                exit();
             }
         } else {
             echo "Gagal mengunggah file foto.";
         }
     } else {
-        echo "Error unggah foto: " . $_FILES['foto']['error'];
+        echo "File foto tidak ada atau gagal diunggah.";
     }
 }
 
 // Fungsi Untuk Melakukan Pengecekan Dari Setiap Inputan Di Masing-masing Fungsi
 function validate_input()
 {
-    global $nama, $email, $telpon, $alamat, $foto, $pengaduan, $captcha, $is_valid;
+    global $nama, $email, $telpon, $alamat, $pengaduan, $captcha, $is_valid;
     cek_nama($nama);
     cek_email($email);
     cek_telpon($telpon);
     cek_alamat($alamat);
-    cek_foto($foto);
     cek_pengaduan($pengaduan);
     cek_captcha($captcha);
+
+    if (isset($_FILES['foto']['name'])) {
+        cek_foto($_FILES['foto']['name']);
+    }
+}
+
+// Fungsi validasi foto, dengan parameter $foto
+function cek_foto($foto): void
+{
+    global $is_valid, $fotoError;
+    echo "cek_foto      : ", $foto, "<br>";
+    if (!preg_match("/\.(jpg|jpeg|png|gif|bmp)$/i", $foto)) {
+        $fotoError = "Foto hanya boleh jpg, jpeg, png, gif, atau bmp.";
+        $is_valid = false;
+    }
 }
 
 // validasi nama
@@ -131,19 +137,6 @@ function cek_alamat($alamat)
     }
 }
 
-function cek_foto($foto): void
-{
-    global $foto, $is_valid, $fotoError;
-    echo "cek_foto      : ", $foto, "<br>";
-    if (!preg_match(
-        "/\.(jpg|jpeg|png|gif|bmp)$/i",
-        $foto
-    )) { // cek foto hanya boleh jpg, jpeg, png, gif,
-        $fotoError = "Foto Hanya Boleh jpg, jpeg, png, gif,
-        ";
-        $is_valid = false;
-    }
-}
 // validasi pengaduan
 function cek_pengaduan($pengaduan)
 {

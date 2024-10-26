@@ -81,7 +81,7 @@ if ($statement->rowCount() < 1) {
             <hr />
             <div class="row">
                 <div class="col-md-8 card-shadow-2 form-custom">
-                    <form class="form-horizontal" role="form" method="post" action="private/validasi">
+                    <form class="form-horizontal" role="form" method="post" action="private/validasi" enctype="multipart/form-data">
                         <div class="form-group">
                             <label for="nomor" class="col-sm-3 control-label">Nomor Pengaduan</label>
                             <div class="col-sm-9">

@@ -190,7 +190,12 @@ if (isset($_POST['submit'])) {
                                     <hr class="hr-laporan">
 
                                     <div class="">
-                                        <?php echo $key['foto']; ?>
+                                        <?php if (!empty($key['foto'])): // Pastikan ada foto yang tersedia 
+                                        ?>
+                                            <img src="/foto/<?= $key['foto']; ?>" alt="Foto Laporan" class="img-responsive" />
+                                        <?php else: ?>
+                                            <p>Tidak ada foto yang diunggah.</p>
+                                        <?php endif; ?>
                                     </div>
 
                                     <!-- Comments -->
@@ -286,7 +291,7 @@ if (isset($_POST['submit'])) {
                         </li>
                     </ul>
                     <p class="mb-0">
-                    Kecamatan Serang Baru <br> Kabupaten Bekasi <br> Provinsi Jawa Barat
+                        Kecamatan Serang Baru <br> Kabupaten Bekasi <br> Provinsi Jawa Barat
                     </p>
                 </div>
                 <div class="col-md-4 mb-5 mb-lg-0">

@@ -186,6 +186,8 @@ function RandomAvatar()
                                         <p>
                                             <?php echo $key['isi']; ?>
                                         </p>
+                                        <hr class="">
+                                        <img src="/foto/<?= $key['foto']; ?>" alt="">
                                     </div>
                                     <!-- media body -->
                                 </div>
