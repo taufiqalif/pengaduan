@@ -192,7 +192,7 @@ if (isset($_POST['submit'])) {
                                     <div class="">
                                         <?php if (!empty($key['foto'])): // Pastikan ada foto yang tersedia 
                                         ?>
-                                            <img src="/foto/<?= $key['foto']; ?>" alt="Foto Laporan" class="img-responsive" />
+                                            <img src="./foto/<?= $key['foto']; ?>" alt="Foto Laporan" class="img-responsive" />
                                         <?php else: ?>
                                             <p>Tidak ada foto yang diunggah.</p>
                                         <?php endif; ?>

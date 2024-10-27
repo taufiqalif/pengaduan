@@ -295,6 +295,10 @@ if (isset($_POST['Balas'])) {
                             <hr class="custom">
                             <p class="custom"><b>Tujuan :</b></p>
                             <p class="custom"><?php echo $key['nama_divisi']; ?></p>
+                            <p class="custom"><b>foto :</b></p>
+                            <p class="custom">
+                                <img style="width: 500px;" src="../foto/<?php echo $key['foto']; ?>" alt="">
+                            </p>
                             <hr class="custom">
                             <p class="custom"><b>Isi Laporan :</b></p>
                             <p class="custom"><?php echo $key['isi']; ?></p>
@@ -339,6 +343,11 @@ if (isset($_POST['Balas'])) {
                                 <div class="form-group">
                                     <p><b>Nama Pelapor:</b></p>
                                     <?php echo $key['nama']; ?>
+                                    <hr>
+                                </div>
+                                <div class="form-group">
+                                    <p><b>Foto:</b></p>
+                                    <img style="width: 300px;" src="../foto/<?php echo $key['foto']; ?>" alt="">
                                     <hr>
                                 </div>
                                 <div class="form-group">

@@ -283,6 +283,7 @@ if ($id_admin > 0) {
                                         <td><?php echo $key['telpon']; ?></td>
                                         <td><?php echo $key['alamat']; ?></td>
                                         <td><?php echo $key['nama_divisi']; ?></td>
+                                        <td><img style="width: 100px;" src="../foto/<?php echo $key['foto']; ?>" alt=""></td>
                                         <td><?php echo $key['isi']; ?></td>
                                         <td><?php echo $tanggal; ?></td>
                                         <td><?php echo $style_status; ?></td>

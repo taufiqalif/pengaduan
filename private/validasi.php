@@ -40,20 +40,16 @@ if (isset($_POST['submit'])) {
                 $stmt->bindValue(':isi', htmlspecialchars($pengaduan));
                 $stmt->bindValue(':status', "Menunggu");
 
-                if ($stmt->execute()) {
-                    header("Location: ../index?status=success");
-                    exit();
-                } else {
-                    echo "Gagal menyimpan data ke database.";
-                }
+                header:
+                $stmt->execute();
+                header("Location: ../index?status=success");
+            } elseif (!$is_valid) {
+                header("Location: ../lapor.php?nomor=$nomor&nama=$nama&namaError=$namaError&email=$email&emailError=$emailError&telpon=$telpon&telponError=$telponError&alamat=$alamat&alamatError=$alamatError&pengaduan=$pengaduan&pengaduanError=$pengaduanError&captcha=$captcha&captchaError=$captchaError");
             }
-        } else {
-            echo "Gagal mengunggah file foto.";
         }
-    } else {
-        echo "File foto tidak ada atau gagal diunggah.";
     }
 }
+
 
 // Fungsi Untuk Melakukan Pengecekan Dari Setiap Inputan Di Masing-masing Fungsi
 function validate_input()
